@@ -1,0 +1,25 @@
+.card {
+  fill: #888;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  box-shadow: 10px 4px 17px #ffffff;
+
+
+
+}
+
+.card:hover {
+  transform: translatey(-3px);
+  box-shadow: 0 4px 17px rgba(255, 255, 255, 0.35);
+  -webkit-transform: translatey(-3px);
+  -moz-transform: translatey(-3px);
+  -ms-transform: translatey(-3px);
+  -o-transform: translatey(-3px);
+}
+
+.card :hover {
+  fill: rgb(105, 103, 103);
+}

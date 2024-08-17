@@ -1,0 +1,116 @@
+<br>
+<p class="mt-5">Card works!</p>
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Album Example</h1>
+        <p class="lead text-body-secondary">
+          Something short and leading about the collection below—its contents, the creator, etc. Make it short and
+          sweet, but not too short so folks don’t simply skip over it entirely.
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main Call to Action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary Action</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let hero of heroes$ | async">
+          <div class="card shadow">
+            <img src="../../assets/hosting.png" class="card-img-top" alt="...">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="46" height="55" fill="currentColor"
+              class="bi bi-emoji-laughing bd-placeholder-img card-img-top mt-4" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+              <path
+                d="M12.331 9.5a1 1 0 0 1 0 1A5 5 0 0 1 8 13a5 5 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5M7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5" />
+            </svg> -->
+
+            <div class="card-body">
+              <h3 class="card-text">Name: {{ hero.name }}</h3>
+              <h3 class="card-text">ID: {{ hero.id }}</h3>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a type="button" class="btn btn-sm btn-outline-info" [routerLink]="['/details', hero.id]">
+                    View Details
+                  </a>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add a fallback message if no heroes are available -->
+        <div class="col" *ngIf="(heroes$ | async)?.length === 0">
+          <p>No heroes available at the moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+<!-- <br>
+<p class="mt-5">card works!</p>
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Album example</h1>
+        <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the
+          creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col " *ngFor="let hero of heroes$|async">
+          <div class="card shadow">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="55" fill="currentColor"
+              class="bi bi-emoji-laughing  bd-placeholder-img card-img-top   mt-4  " viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+              <path
+                d="M12.331 9.5a1 1 0 0 1 0 1A5 5 0 0 1 8 13a5 5 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5M7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5" />
+            </svg>
+
+            <div class="card-body">
+              <h3 class="card-text">name {{hero.name}}</h3>
+
+              <h3 class="card-text">id: {{hero.id}}</h3>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a type="button" class="btn btn-sm btn-outline-info " [routerLink]="['/details',hero.id]">View
+                    details</a>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main> -->

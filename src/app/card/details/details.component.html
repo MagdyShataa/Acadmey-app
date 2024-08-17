@@ -1,0 +1,38 @@
+<p>details works!</p>
+<div *ngIf="hero$ | async as hero; else loading" class="mt-5 card p-3 mx-5 ">
+  <img src="../../assets/hosting.png" class="card-img-top w-25 h-25" alt="...">
+
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="46" height="55" fill="currentColor"
+  class="bi bi-emoji-laughing bd-placeholder-img card-img-top mt-4" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+  <path
+    d="M12.331 9.5a1 1 0 0 1 0 1A5 5 0 0 1 8 13a5 5 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5M7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5" />
+</svg> -->
+  <h2>{{ hero.name }} Details</h2>
+  <div><span>Id: </span>{{ hero.id }}</div>
+  <div>
+    <!-- <label>
+      Name:
+      <input [(ngModel)]="hero.name" placeholder="name" />
+    </label> -->
+  </div>
+  <button   class="btn btn-outline-info w-25 mt-4 " (click)="goBack()">Go Back</button>
+</div>
+
+<ng-template #loading>
+  <p>Loading hero details...</p>
+</ng-template>
+<!-- <div class="container mt-5">
+  <div class="card text-bg-dark" *ngFor="let hero of hero">
+
+    <div class="card-body shadow ">
+      <h5 class="card-title">
+        <h3>{{ hero.name }}</h3>
+        <p>Id: {{ hero.id }}</p>
+      </h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div> -->
